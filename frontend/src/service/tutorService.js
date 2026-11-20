@@ -12,6 +12,10 @@ export const tutorService = {
     return requisicao(`/tutores/${id}`);
   },
 
+  listarAnimais(id) {
+    return requisicao(`/tutores/${id}/animais`);
+  },
+
   criar(dadosTutor) {
     return requisicao(`/tutores`, {
       method: 'POST',
@@ -27,7 +31,7 @@ export const tutorService = {
   },
 
   excluir(id) {
-    return requisicao(`/totores/${id}`, {
+    return requisicao(`/tutores/${id}`, {
       method: 'DELETE',
     });
   },
